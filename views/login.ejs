@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/grafico.css">
+
+    <title>Formulario de registro</title>
+</head>
+<body class="todo">
+    
+<form class="form" action="localhost/3000/register" target="" method="GET" name="form-register">
+
+<label class="IL" for="Nombres">Nombre:</label>
+<input class="IL" type="text" name="Nombres" id="Nombres" placeholder="Ingrese su nombre" required>
+<label class="IL" for="Contrasenas">Contrasena:</label>
+<input class="IL" type="password" name="Contrasena" id="Contrasenas" placeholder="Ingrese su Contrasena" required>
+
+<input class="bottom" type="submit" value="Login">
+
+</form>
+
+<script>
+    function mostrarContrasena(){
+        var tipo = document.getElementById("password");
+        if(tipo.type == "password"){
+            tipo.type = "text";
+        }else{
+            tipo.type = "password";
+        }
+    }
+  </script>
+
+</body>
+</html>

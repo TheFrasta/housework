@@ -2,6 +2,7 @@ const { request } = require('express');
 const express = require('express');
 const app = express();
 app.use(express.json());
+app.set('view engine', 'ejs');
 
 //middlewares
 
@@ -24,20 +25,26 @@ app.use(express.static('Frontend/assets'));
 // rutas
 app.get('/', (req,res) =>{
 
-res.send('<h1>Hola mundo</h1>');
+res.render('index');
 
 });
 
-app.get('/register', (req,res) => {
+app.get('/register', (req,res) =>{
 
-    res.send('Aqui te puedes registrar');
+res.render('register');
+    
 });
+
+app.get('/login', (req,res) =>{
+
+    res.render('login');
+        
+    });
 
 app.put('/login', (req,res) => {
 
     res.send('Aqui te puedes loguear');
 });
-
 
 app.delete('/about us', (req,res) => {
 
@@ -63,17 +70,23 @@ app.post('/user/:id', (req,res) => {
     res.send('EL POST HA SIDO SOLICITADO');
 });
 
+app.post('/register',(req,res) =>{
+
+
+
+});
+
 app.listen(3000, function() {
 
 console.log('El servidor esta funcionando')
 
 });
 
-app.get('*', (res,req) => {
+// app.get('*', (res,req) => {
 
-res.send('Archivo no encontrado')
+// res.send('Archivo no encontrado')
 
-});
+// });
 
 
 // const x = function (param) {return param*param};
