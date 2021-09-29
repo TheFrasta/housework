@@ -3,6 +3,7 @@
     --color-primary: #667eea;
     --color-secondary: #5e3d7e;
     --bottom-padding: 20px 40px;
+    --background-register: linear-gradient(0deg, rgba(69, 128, 201, 0.537) 0%, rgba(87, 40, 55,0.537) 100% );
 }
 
 
@@ -12,9 +13,7 @@
 body{
 
     font-family: 'Exo 2', sans-serif;  
-    
-    
-}
+    }
 
 .container{
 
@@ -445,26 +444,32 @@ line-height: 60px;
 .todo{
 
 box-sizing: border-box;
+font-family: monospace;
+font-size: 1rem;
 
 }
 
 .form{
+
 	width: 300px;
 	padding: 20px;
 	border-radius:10px;
+    background-image: var(--background-register), url('../assets/register.jpg');
 	margin: auto;
-	background-color: var(--color-primary);
     display: flex;
     justify-content: center;
     flex-direction: column;
     line-height: 30px;
     text-align: center;
+    background-size: cover;
+    position: relative;
 
 }
 
-.IL{
+.form input{
 
     text-align: center;
+    font-weight: bold;
 
 }
 
