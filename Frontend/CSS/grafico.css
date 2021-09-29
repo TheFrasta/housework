@@ -147,11 +147,10 @@ margin-top: 20px;
 
 /*About*/
 
-.presentation{
+/* .presentation{
     /* padding-top: 0;
-text-align: center; */
+text-align: center; }*/
     
-}
 
 .presentation__picture{
 
@@ -452,7 +451,7 @@ font-size: 1rem;
 .form{
 
 	width: 300px;
-	padding: 20px;
+	padding: 30px;
 	border-radius:10px;
     background-image: var(--background-register), url('../assets/register.jpg');
 	margin: auto;
@@ -476,5 +475,21 @@ font-size: 1rem;
 .bottom{
 
 margin-top: 20px;
+
+}
+
+.TC{
+
+    text-decoration:none;
+    color: #fff;
+
+}
+
+.cuenta{
+
+    text-decoration: none;
+    color: #fff;
+    border: solid 2px;
+    padding: 10px;
 
 }

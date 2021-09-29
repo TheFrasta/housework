@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,24 +9,35 @@
 
     <title>Formulario de registro</title>
 </head>
+
+<header>
+
+    <%- include('../Frontend/Templates/header.ejs'); %>
+
+</header>
+
+
 <body class="todo">
-    
-<form class="form" action="localhost/3000/register" target="" method="GET" name="form-register">
 
-<label for="Nombres">Nombre:</label>
-<input type="text" name="Nombres" id="Nombres" placeholder="Ingrese su nombre">
-<label for="Apellidos">Apellido:</label>
-<input type="text" name="Apellidos" id="Apellidos" placeholder="Ingrese su Apellido">
-<label for="Email">Email</label>
-<input type="text" name="Email" id="Email" placeholder="Ingrese su Email">
-<label for="Contrasenas">Contrasena:</label>
-<input type="text" name="Contrasena" id="Contrasenas" placeholder="Ingrese su Contrasena">
-<p>Estoy de acuedo con <a href="#">Terminos y Condiciones</a></p>
+    <form class="form" action="/login" target="" method="POST" name="form-register">
 
-<input class="bottom" type="submit" value="Registrar">
-<p><a href="#">Ya tengo cuenta?</a></p>
+        <label for="Nombres">Nombre:</label>
+        <input type="text" name="Nombres" id="Nombres" placeholder="Ingrese su nombre" required>
+        <label for="Apellidos">Apellido:</label>
+        <input type="text" name="Apellidos" id="Apellidos" placeholder="Ingrese su Apellido" required>
+        <label for="Email">Email</label>
+        <input type="text" name="Email" id="Email" placeholder="Ingrese su Email" required>
+        <label for="Contrasenas">Contraseña:</label>
+        <input type="password" name="Contrasena" id="Contrasena" placeholder="Ingrese su Contraseña" required>
+        <label for="TerCon" id="idterminos">Estoy de acuedo con <a href="#" class="TC"><a>Terminos y Condiciones</a></label>
+           <div> <input type="checkbox" name="TerCon" id="Terminosycondiciones" required> </div>
+            <input class="bottom" id="registerbottom" type="submit" value="Registrar">
+            <p><a href="#" class="cuenta">Ya tengo cuenta?</a></p>
 
-</form>
+    </form>
+
+    <%- include('../Frontend/Templates/footer.ejs'); %>
 
 </body>
+
 </html>

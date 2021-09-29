@@ -22,34 +22,23 @@ next();
 app.use(express.static('Frontend'));
 app.use(express.static('Frontend/assets'));
 
-// rutas
-app.get('/', (req,res) =>{
+// routers
+const indexRouter = require('./routes/index')
 
-res.render('index');
+app.use('/', indexRouter)
 
-});
 
-app.get('/register', (req,res) =>{
+const RegisterRouter = require('./routes/register')
 
-res.render('register');
-    
-});
+app.use('/register', RegisterRouter)
 
-app.get('/login', (req,res) =>{
+
+
+app.post('/login', (req,res) =>{
 
     res.render('login');
         
     });
-
-app.put('/login', (req,res) => {
-
-    res.send('Aqui te puedes loguear');
-});
-
-app.delete('/about us', (req,res) => {
-
-    res.send('Aqui tendras informacion sobre nosotros');
-});
 
 app.get('/user', (req,res) => {
 
@@ -72,8 +61,6 @@ app.post('/user/:id', (req,res) => {
 
 app.post('/register',(req,res) =>{
 
-
-
 });
 
 app.listen(3000, function() {
@@ -81,6 +68,13 @@ app.listen(3000, function() {
 console.log('El servidor esta funcionando')
 
 });
+
+
+
+
+
+
+
 
 // app.get('*', (res,req) => {
 
