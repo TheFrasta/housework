@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>F2TC PRUEBA</title>
+    <title>SF Components</title>
     <link rel="stylesheet" href="CSS/grafico.css">
     <link rel="stylesheet" href="CSS/normalize.css">
 
@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <header class="hero">
+    <header class="hero" id="Inicio">
         <div class="container">
             <nav class="nav">
                 <a href="#" class="nav__items nav__items--cta">Solicitar servicio</a>
@@ -23,8 +23,8 @@
 
             <section class="hero__container">
                 <div class="hero__texts">
-                    <h1 class="hero__title">Probando pagina F2TC</h1>
-                    <h2 class="hero__subtitle">Esta es una pagina de prueba para F2TC</h2>
+                    <h1 class="hero__title">PC Building</h1>
+                    <h2 class="hero__subtitle">Esta pagina sirve para crear tu propia computadora</h2>
                     <a href="#" class="hero__cta" id="SS"> Solicitar servicio</a>
                 </div>
             </section>
@@ -65,22 +65,22 @@
             </figure>
 
             <figure class="about__img about__img--left">
-                <img src="assets/f2tclogo.png" class="about__picture" alt="Imagen Hacking">
+                <img src="assets/build2.jpg" class="about__picture" id="build2" alt="Imagen de un disipador">
             </figure>
 
             <div class="about__texts">
                 <h2 class="subtitle">
                     ¿Quienes somos?
                 </h2>
-                <p class="about__paragraph">Somos una empresa de Ciberseguridad que proporciona tu seguridad, con un
-                    personal profesional al tanto de cualquier tipo de inferencia dentro de su proyecto.</p>
+                <p class="about__paragraph">Somos una empresa de hardware que proporciona la seguridad de una buena computadora, con un
+                    personal profesional a la hora de elaborar su maquina, puede adquirir tanto computadoras prediseñadas, como la tuya propia.</p>
 
             </div>
         </section>
 
         <section class="projects">
             <div class="container">
-                <h2 class="subtitle">Mis proyectos</h2>
+                <h2 class="subtitle" id="Proyectos">Mis proyectos</h2>
                 <div class="projects__grid">
 
                     <article class="projects__items">
@@ -134,7 +134,7 @@
 
         <section class="Testimony container">
 
-            <h2 class="subtitle">Que dicen de Nosotros</h2>
+            <h2 class="subtitle" id="Nosotros">Que dicen de Nosotros</h2>
             <div class="testimony__grid">
                 <article class="testimony__item">
                     <div class="testimony__person">
@@ -173,10 +173,9 @@
     <footer class="footer">
         <div class="container footer__grid">
             <nav class="nav --nav__footer">
-                <a href="#" class="nav__items nav__items--footer">Inicio</a>
-                <a href="#" class="nav__items nav__items--footer">Sobre nosotros</a>
-                <a href="#" class="nav__items nav__items--footer">Developers</a>
-                <a href="#" class="nav__items nav__items--footer">Proyectos</a>
+                <a href="#Inicio" class="nav__items nav__items--footer">Inicio</a>
+                <a href="#Nosotros" class="nav__items nav__items--footer">Sobre nosotros</a>
+                <a href="#Proyectos" class="nav__items nav__items--footer">Proyectos</a>
             </nav>
             <section class="footer__contact">
                 <h3 class="footer__title">Contactanos</h3>
