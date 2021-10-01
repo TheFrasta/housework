@@ -19,20 +19,22 @@
 
 <body class="todo">
 
-    <form class="form" action="/login" target="" method="POST" name="form-register">
+    <form class="form" action="/register" target="" method="POST" name="form-register">
 
         <label for="Nombres">Nombre:</label>
-        <input type="text" name="Nombres" id="Nombres" placeholder="Ingrese su nombre" required>
+        <input type="text" name="Nombre" id="Nombres" placeholder="Ingrese su nombre" required>
         <label for="Apellidos">Apellido:</label>
-        <input type="text" name="Apellidos" id="Apellidos" placeholder="Ingrese su Apellido" required>
+        <input type="text" name="Apellido" id="Apellidos" placeholder="Ingrese su Apellido" required>
         <label for="Email">Email</label>
         <input type="text" name="Email" id="Email" placeholder="Ingrese su Email" required>
         <label for="Contrasenas">Contraseña:</label>
         <input type="password" name="Contrasena" id="Contrasena" placeholder="Ingrese su Contraseña" required>
-        <label for="TerCon" id="idterminos">Estoy de acuedo con <a href="#" class="TC"><a>Terminos y Condiciones</a></label>
-           <div> <input type="checkbox" name="TerCon" id="Terminosycondiciones" required> </div>
-            <input class="bottom" id="registerbottom" type="submit" value="Registrar">
-            <p><a href="#" class="cuenta">Ya tengo cuenta?</a></p>
+        <label for="TerCon" id="idterminos">Estoy de acuedo con <a href="#" class="TC"><a>Terminos y
+                    Condiciones</a></label>
+        <div> <input type="checkbox" name="TerCon" id="Terminosycondiciones" required> </div>
+        <!-- <input class="bottom" id="registerbottom" type="submit" value="Registrar"> -->
+        <button class="bottom" id="registerbottom" type="submit" value="Registrar">Registrar</button>
+        <p><a href="#" class="cuenta">Ya tengo cuenta?</a></p>
 
     </form>
 

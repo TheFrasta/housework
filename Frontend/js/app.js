@@ -3,5 +3,7 @@
 //     document.getElementById('title')
 //     .innerHTML = 'probando JS';
 
-// }, 3000);
+// }, 3000);rgb(130, 120, 120)setTimeout(() => {
 
+    <button onclick="window.location.href='/page2'">Continue</button>
+    

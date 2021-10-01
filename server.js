@@ -1,23 +1,37 @@
 const { request } = require('express');
 const express = require('express');
 const app = express();
+const mongoose = require('mongoose');
+const User = require('./models/user');
+const Register = require('./models/user');
+const bodyparser = require('body-parser');
+// Conexion a la base de datos:
+
+mongoose.connect('mongodb://localhost/webstore')
+.then(() => console.log('base de datos conectada'))
+.catch(e => console.log(e))
+
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+
 app.use(express.json());
 app.set('view engine', 'ejs');
 
 //middlewares
 
-app.use(function(req,res,next){
+// app.use(function(req,res,next){
 
-console.log('request url:' + request.url)
-next();
-});
+// console.log('request url:' + request.url)
+// next();
+// });
 
-app.use((req,res, next)=>{
+// app.use((req,res, next)=>{
 
-console.log('Aqui ha pasado por Esta funcion');
-next();
+// console.log('Aqui ha pasado por Esta funcion');
+// next();
 
-});
+// });
 
 app.use(express.static('Frontend'));
 app.use(express.static('Frontend/assets'));
@@ -31,7 +45,6 @@ app.use('/', indexRouter)
 const RegisterRouter = require('./routes/register')
 
 app.use('/register', RegisterRouter)
-
 
 
 app.post('/login', (req,res) =>{
@@ -57,10 +70,6 @@ app.post('/user/:id', (req,res) => {
     console.log(req.body);
     console.log(req.params)
     res.send('EL POST HA SIDO SOLICITADO');
-});
-
-app.post('/register',(req,res) =>{
-
 });
 
 app.listen(3000, function() {
