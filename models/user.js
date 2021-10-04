@@ -7,11 +7,11 @@ const UserSchema = new Schema({
 Nombre : String,
 Apellido : String,
 Email : String,
-Contrasena : String,
+Contrasena : String
 
 })
 
 //crear modelo
 
-const User = mongoose.model('users', UserSchema);
+const User = mongoose.model('Users', UserSchema);
 module.exports = User;

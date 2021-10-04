@@ -4,9 +4,9 @@ const app = express();
 const mongoose = require('mongoose');
 const User = require('./models/user');
 const Register = require('./models/user');
-const bodyparser = require('body-parser');
-// Conexion a la base de datos:
+const bodyParser = require('body-parser');
 
+// Conexion a la base de datos:
 mongoose.connect('mongodb://localhost/webstore')
 .then(() => console.log('base de datos conectada'))
 .catch(e => console.log(e))
@@ -53,17 +53,17 @@ app.post('/login', (req,res) =>{
         
     });
 
-app.get('/user', (req,res) => {
+// app.get('/user', (req,res) => {
 
-res.json({
+// res.json({
 
-username: 'John',
-lastname: 'Sanchez',
+// username: 'John',
+// lastname: 'Sanchez',
 
-});
+// });
 
 
-});
+// });
 
 app.post('/user/:id', (req,res) => {
 

@@ -12,8 +12,8 @@ router.get('/', (req, res) => {
 router.post('/',(req,res) =>{
 
     console.log('Llegue a esa ruta');
-    const {Nombre, Apellido ,Email, Contraseña} = req.body;
-    const user = new User({Nombre,Apellido, Email,Contraseña})
+    const {Nombre, Apellido,Email, Contrasena} = req.body;
+    const user = new User({Nombre,Apellido,Email, Contrasena})
     console.log(req.body);
     
     user.save(err =>{
