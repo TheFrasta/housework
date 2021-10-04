@@ -10,18 +10,18 @@
 </head>
 <body class="todo">
     
-<form class="form" action="localhost/3000/register" target="" method="GET" name="form-register">
+<form class="form" action="/login" target="" method="POST" name="form-login">
 
-<label for="Nombres">Nombre:</label>
-<input type="text" name="Nombres" id="Nombres" placeholder="Ingrese su nombre" required>
-<label for="Contrasenas">Contrasena:</label>
+<label for="Nombre">Nombre:</label>
+<input type="text" name="Nombre" id="Nombres" placeholder="Ingrese su nombre" required>
+<label for="Contrasena">Contrasena:</label>
 <input type="password" name="Contrasena" id="Contrasenas" placeholder="Ingrese su Contrasena" required>
 
 <input class="bottom" type="submit" value="Login">
 
 </form>
 
-<script>
+<!-- <script>
     function mostrarContrasena(){
         var tipo = document.getElementById("password");
         if(tipo.type == "password"){
@@ -30,7 +30,7 @@
             tipo.type = "password";
         }
     }
-  </script>
+  </script> -->
 
 </body>
 </html>

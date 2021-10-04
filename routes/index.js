@@ -1,3 +1,4 @@
+//Router para direccionar a mi pagina inicials
 const express = require('express');
 const router = express.Router();
 
